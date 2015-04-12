@@ -7,7 +7,7 @@ function statusUpdate(count) {
     if (count == 0) {
         $('#status').html("Drag cool pics right, drag boring ones left!");
     } else if (count == 10) {
-        $('#status').html("WHOA, Ten!? There's no way you can hit 100!");
+        $('#status').html("WHOA, Ten!? No way you can hit 100!");
         $('body').css({'background': '#eee'});
         goal = 100;
     } else if (count == 18) {
