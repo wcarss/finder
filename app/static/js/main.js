@@ -57,7 +57,7 @@ $(".tinderslide").jTinder({
         imageCount += 1;
         statusUpdate(imageCount);
        // gallery.push(currentImageUrl.toString());
-        $.post('image_post.php', current_image);
+        $.post('/save_image', current_image);
     },
     newImage: function () {
         x = Math.floor(Math.random() * 130);
@@ -65,7 +65,7 @@ $(".tinderslide").jTinder({
         currentImageUrl = "http://map1.vis.earthdata.nasa.gov/wmts-geo/MODIS_Terra_CorrectedReflectance_TrueColor/default/2012-07-09/EPSG4326_250m/8/"+ x +"/"+ y +".jpg";
         console.log(currentImageUrl);
         current_image = {
-            "now": new Date().toMysqlFormat(),
+            "created_at": new Date().toMysqlFormat(),
             "x": x,
             "y": y,
             "zoom": 8,

@@ -1,5 +1,6 @@
 from app import app
-from flask import render_template
+from flask import render_template, request
+from models.images import Images
 import datetime
 
 
@@ -14,6 +15,11 @@ def index():
 @app.route('/quiet')
 def quiet():
   return render_template('quiet.html')
+
+@app.route('/save_image', methods=['POST'])
+def save_image():
+  Images.add(request.form)
+  return "", 200
 
 """
 @app.route('/
