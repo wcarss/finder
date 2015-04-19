@@ -1,4 +1,4 @@
-    /*
+/*
  * jTinder v.1.0.0
  * https://github.com/do-web/jTinder
  * Requires jQuery 1.7+, jQuery transform2d
@@ -59,8 +59,9 @@
 
         addPane: function() {
             container.prepend('<li class="pane"><div class="img"></div><div class="like"></div><div class="dislike"></div></li>');
-            s = 'url("' + this.settings.newImage() + '") no-repeat scroll center center';
-            panes = $("ul>li");
+            s = 'url(' + this.settings.newImage() + ') no-repeat scroll center center';
+            console.log(s);
+            panes = $(".tinderslide>ul>li");
             panes.eq(0).css({'background': s, 'background-size': 'contain'});
         },
 
