@@ -1,0 +1,6 @@
+database:
+    user: finder
+    password: finder
+    database: finder
+    host: localhost
+    raise_on_warnings: False
