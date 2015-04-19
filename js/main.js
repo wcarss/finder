@@ -1,7 +1,7 @@
 /**
  * jTinder initialization
  */
-$("#tinderslide").jTinder({
+$(".tinderslide").jTinder({
     // dislike callback
     onDislike: function (item) {
         // set the status text
@@ -29,5 +29,7 @@ $("#tinderslide").jTinder({
  */
 $('.actions .like, .actions .dislike').click(function(e){
     e.preventDefault();
-    $("#tinderslide").jTinder($(this).attr('class'));
+    $(".tinderslide").jTinder($(this).attr('class'));
 });
+
+console.log("loaded.");
