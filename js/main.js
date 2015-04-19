@@ -48,7 +48,7 @@ function statusUpdate(count) {
     }
 }
 
-$("#tinderslide").jTinder({
+$(".tinderslide").jTinder({
     onDislike: function (item) {
         imageCount += 1;
         statusUpdate(imageCount);
