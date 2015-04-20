@@ -24,8 +24,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/about">About</a></li>
             <li><a href="/best">Best</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -33,25 +33,19 @@
     </nav>
 
   <div class="container">
-    <div class="tinderslide starter-template row">
-      <ul>
-        <li></li>
-      </ul>
-    </div>
-
-    <div class="actions row">
-      <a href="#" class="dislike"><i></i></a>
-      <a href="#" class="like"><i></i></a>
-    </div>
-
-      <div id="status row"></div>
+    <h1>Finder</h1>
+    <p>This is Finder. It is a powerful tool for sorting through NASA's massive volume of image data, packaged in a very simple, intuitive interface.</p>
+    <p>Traditional scroll and zoom map interfaces are difficult to methodically examine because they turn the world into a seamless, scrolling canvas. This keeps users from knowing the exact piece of the map they can see, and hampers thorough searching. It's even harder to mark locations off as potentially interesting for further review, because map interfaces are not built with crowdsourced annotations in mind.</p>
+    <p>Finder was inspired by the call for a hot-or-not-like interface for crowds to interact with. It mimics Tinder, the modern hot-or not, by providing a swipe-to-vote interface that presents users with random 250 meter tiles of full colour satellite imagery. Users interact with Finder to search for beautiful and interesting photos of the world to share, and swipe left or right to provide "votes" for pictures.</p>
+    <p>The images voted most interesting can then be 'skimmed off the top' and examined by qualified researchers for features like new volcanoes or meteorite impact sites.</p>
+    <br>
+    <p>You can find the source code for finder at <a href="https://github.com/wcarss/finder">https://github.com/wcarss/finder</a>.</p>
+    <p>This application was made by Wyatt Carss, a human.</p>
   </div>
 
   <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/jquery.transform2d.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.jTinder.js') }}"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

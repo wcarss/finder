@@ -21,40 +21,11 @@ def save_image():
   Images.add(request.form)
   return "", 200
 
-"""
-@app.route('/
+@app.route('/best')
+def best_images():
+  images = Images.get_best()
+  return render_template('best.html', images=images)
 
-/			find random images
-/users/username		get user data
-/login			post here with username and password to initiate a session
-/logout			post here while logged in to terminate a session
-/best			get here to pull json list of best images
-/mine			get here to pull json list of personal images
-/save			post here to mark an image as good
-/tag			post here to add a tag to an image
-
-
-straight-up rest style
-
-images
-images/id
-users
-users/id
-
-/best -> pulls /images with a sort-by
-/mine -> pull
-
-
-images
-id	url	date	zoom	x	y	x
-
-best
-image_id	count
-
-mine
-image_id	user_id
-
-images
-users
-
-"""
+@app.route('/about')
+def about():
+  return render_template('about.html')

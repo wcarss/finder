@@ -34,3 +34,22 @@ class Images(object):
     # Make sure data is committed to the database
     cnx.commit()
     cnx.close()
+
+  @classmethod
+  def get_best(cls):
+    cnx = mysql.connector.connect(**app.config['database'])
+    cursor = cnx.cursor()
+
+    query = (
+      "SELECT url, count(*) FROM images group by url order by 2 desc limit 20"
+    )
+
+    cursor.execute(query)
+
+    images = []
+    for (url, count) in cursor:
+        images.append(url)
+
+    cnx.close()
+
+    return images

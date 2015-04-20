@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/best.css') }}">
     <!-- Optional theme
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">-->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jTinder.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -24,34 +23,32 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/best">Best</a></li>
+            <li class="active"><a href="/best">Best</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
   <div class="container">
-    <div class="tinderslide starter-template row">
-      <ul>
-        <li></li>
-      </ul>
-    </div>
-
+    <ul class="images">
+    {% for image in images %}
+      <li><image src="{{ image }}"/></li>
+    {% endfor %}
+    </ul>
+  
     <div class="actions row">
       <a href="#" class="dislike"><i></i></a>
       <a href="#" class="like"><i></i></a>
     </div>
 
-      <div id="status row"></div>
+    <div id="status row"></div>
   </div>
 
   <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.transform2d.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.jTinder.js') }}"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/best.js') }}"></script>
 </body>
 </html>
